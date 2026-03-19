@@ -11,7 +11,7 @@ This repository contains the R code to reproduce the results presented in [Optim
 An illustration of three L-CRT design variants with $J = 6$ periods:
 
 <p align="center">
-  <img src="figures/designs.pdf" width="70%">
+  <img src="figures/designs.png" width="70%">
 </p>
 
 Purple cells indicate intervention periods and white cells indicate control periods. Panel (a) displays a PA-LCRT, panel (b) shows a CRXO trial, and panel (c) presents an SW-CRT.
