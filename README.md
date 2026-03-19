@@ -53,7 +53,7 @@ To reproduce the results, please download this repo on a machine with R, run eac
 
 Required R packages: dplyr, ggh4x, ggplot2, nloptr, patchwork, tidyr, xtable.
 
-### Compute Optimal Designs
+### Sample Size Calculation
 
 Run our [`Shiny App`](https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/) to find optimal sample sizes for cost-effectiveness L-CRTs:
 
