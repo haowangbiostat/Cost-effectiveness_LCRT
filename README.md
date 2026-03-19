@@ -27,6 +27,28 @@ An illustration of three L-CRT design variants with $J = 6$ periods:
   <img src="figures/designs.png" width="100%">
 </p>
 
+### Intracluster Correlation Structure
+
+The bivariate linear mixed model induces seven ICCs under a nested exchangeable correlation structure:
+
+<p align="center">
+  <img src="figures/ICC_diagram.pdf" width="100%">
+</p>
+
+Each dashed oval represents an individual observed in a period (dashed square) nested in the cluster, with both a clinical outcome ($E$) and cost ($C$) measured per individual. Arrows depict the ICCs corresponding to within-period correlations ($\rho_0^E$, $\rho_0^C$), between-period correlations ($\rho_1^E$, $\rho_1^C$), and three types of between-outcome correlations ($\rho_0^{EC}$, $\rho_1^{EC}$, $\rho_2^{EC}$).
+
+| Type | ICC | Description |
+|------|-----|-------------|
+| Outcome-specific | $\rho_0^E$ | Within-period effect ICC |
+| | $\rho_0^C$ | Within-period cost ICC |
+| | $\rho_1^E$ | Between-period effect ICC |
+| | $\rho_1^C$ | Between-period cost ICC |
+| Between-outcome | $\rho_0^{EC}$ | Within-period effect–cost ICC |
+| | $\rho_1^{EC}$ | Between-period effect–cost ICC |
+| | $\rho_2^{EC}$ | Within-individual effect–cost ICC |
+
+These parameters are subject to the ordering constraints: (i) $\rho_1^E \leq \rho_0^E$; (ii) $\rho_1^C \leq \rho_0^C$; (iii) $\rho_0^{EC} \leq \min(\rho_0^E, \rho_0^C)$; (iv) $\rho_1^{EC} \leq \min(\rho_1^E, \rho_1^C)$; and (v) $\rho_1^{EC} \leq \rho_0^{EC} \leq \rho_2^{EC}$.
+
 ### Quickstart
 
 To reproduce the results, please download this repo on a machine with R, run each R script in the [`codes`](codes) directory without modification, and then the results are saved in [`figures`](figures). To generate tables in the main paper, please run the scripts in [`tables`](tables). All the R scripts can be run standalone. To run the R scripts, you do not need to set any pathnames; everything is relative.
