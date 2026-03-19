@@ -6,6 +6,19 @@
 
 This repository contains the R code to reproduce the results presented in [Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials](TBD).
 
+### Acronyms
+
+* **L-CRT**: Longitudinal cluster randomized trial
+* **PA-LCRT**: Parallel-arm longitudinal cluster randomized trial
+* **CRXO**: Cluster randomized crossover trial
+* **SW-CRT**: Stepped-wedge cluster randomized trial
+* **LOD**: Locally optimal design
+* **MMD**: Maximin design
+* **INMB**: Incremental net monetary benefit
+* **ICC**: Intracluster correlation coefficient
+* **CAC**: Cluster autocorrelation coefficient
+* **RE**: Relative efficiency
+
 ### Overview
 
 An illustration of three L-CRT design variants with $J = 6$ periods:
@@ -63,7 +76,7 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 
 ### Helper Functions
 
-The following scripts in [`codes`](codes) contain helper functions used throughout the analysis. These are automatically sourced by the main scripts — you do not need to run them separately:
+The following scripts in [`codes`](codes) contain helper functions used in the analysis. These are automatically sourced by the main scripts — you do not need to run them separately:
 
 * `utils_PA.R`: variance calculation and LOD/MMD optimization for parallel-arm LCRTs
 * `utils_CRXO.R`: variance calculation and LOD/MMD optimization for cluster randomized crossover trials
