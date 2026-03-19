@@ -6,27 +6,6 @@
 
 This repository contains the R code to reproduce the results presented in [Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials](TBD).
 
-### Acronyms
-
-* **L-CRT**: Longitudinal cluster randomized trial
-* **PA-LCRT**: Parallel-arm longitudinal cluster randomized trial
-* **CRXO**: Cluster randomized crossover trial
-* **SW-CRT**: Stepped-wedge cluster randomized trial
-* **LOD**: Local optimal design
-* **MMD**: Maximin design
-* **INMB**: Incremental net monetary benefit
-* **ICC**: Intracluster correlation coefficient
-* **CAC**: Cluster autocorrelation coefficient
-* **RE**: Relative efficiency
-
-### Overview
-
-An illustration of three L-CRT design variants with $J = 6$ periods:
-
-<p align="center">
-  <img src="figures/designs.png" width="100%">
-</p>
-
 ### Intracluster Correlation Structure
 
 The bivariate linear mixed model induces seven ICCs under a nested exchangeable correlation structure:
@@ -48,6 +27,27 @@ Each dashed oval represents an individual observed in a period (dashed square) n
 | | $\rho_2^{EC}$ | Within-individual effect–cost ICC |
 
 These parameters are subject to the ordering constraints: (i) $\rho_1^E \leq \rho_0^E$; (ii) $\rho_1^C \leq \rho_0^C$; (iii) $\rho_0^{EC} \leq \min(\rho_0^E, \rho_0^C)$; (iv) $\rho_1^{EC} \leq \min(\rho_1^E, \rho_1^C)$; and (v) $\rho_1^{EC} \leq \rho_0^{EC} \leq \rho_2^{EC}$.
+
+### Acronyms
+
+* **L-CRT**: Longitudinal cluster randomized trial
+* **PA-LCRT**: Parallel-arm longitudinal cluster randomized trial
+* **CRXO**: Cluster randomized crossover trial
+* **SW-CRT**: Stepped-wedge cluster randomized trial
+* **LOD**: Local optimal design
+* **MMD**: Maximin design
+* **INMB**: Incremental net monetary benefit
+* **ICC**: Intracluster correlation coefficient
+* **CAC**: Cluster autocorrelation coefficient
+* **RE**: Relative efficiency
+
+### Overview
+
+An illustration of three L-CRT design variants with $J = 6$ periods:
+
+<p align="center">
+  <img src="figures/designs.png" width="100%">
+</p>
 
 ### Quickstart
 
