@@ -31,7 +31,7 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 #### LODs for CRXO Trials and PA-LCRTs (Table 2)
 
 * Run [`table_2_LOD_CRXO.R`](tables/table_2_LOD_CRXO.R) and [`table_2_LOD_PA.R`](tables/table_2_LOD_PA.R)
-  + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
+  + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J \in {2, 4, 6}$ periods
 
 #### MMDs for CRXO Trials and PA-LCRTs (Table 3)
 
