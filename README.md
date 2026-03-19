@@ -12,7 +12,7 @@ This repository contains the R code to reproduce the results presented in [Optim
 * **PA-LCRT**: Parallel-arm longitudinal cluster randomized trial
 * **CRXO**: Cluster randomized crossover trial
 * **SW-CRT**: Stepped-wedge cluster randomized trial
-* **LOD**: Locally optimal design
+* **LOD**: Local optimal design
 * **MMD**: Maximin design
 * **INMB**: Incremental net monetary benefit
 * **ICC**: Intracluster correlation coefficient
