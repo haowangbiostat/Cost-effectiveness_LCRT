@@ -14,7 +14,7 @@ The bivariate linear mixed model induces seven ICCs under a nested exchangeable 
   <img src="figures/ICC_diagram.png" width="100%">
 </p>
 
-Each dashed oval represents an individual observed in a period (dashed square) nested in the cluster, with both a clinical outcome ($E$) and cost ($C$) measured per individual. Arrows depict the ICCs corresponding to within-period correlations ($\rho_0^E$, $\rho_0^C$), between-period correlations ($\rho_1^E$, $\rho_1^C$), and three types of between-outcome correlations ($\rho_0^{EC}$, $\rho_1^{EC}$, $\rho_2^{EC}$).
+Each dashed oval represents an individual observed in a period (dashed square) nested in the cluster, with both a clinical outcome ($E$) and cost ($C$) measured per individual. Arrows depict the ICCs corresponding to within-period correlations ($\rho_0^E$, $\rho_0^C$), between-period correlations ($\rho_1^E$, $\rho_1^C$), and three types of between-outcome correlations ($\rho_0^{EC}$, $\rho_1^{EC}$, $\rho_2^{EC}$). The width of each arrow indicates the relative strength of correlation under the following constraints: (i) $\rho_1^E \leq \rho_0^E$; (ii) $\rho_1^C \leq \rho_0^C$; (iii) $\rho_0^{EC} \leq \min(\rho_0^E, \rho_0^C)$; (iv) $\rho_1^{EC} \leq \min(\rho_1^E, \rho_1^C)$; and (v) $\rho_1^{EC} \leq \rho_0^{EC} \leq \rho_2^{EC}$.
 
 | Type | ICC | Description |
 |------|-----|-------------|
@@ -25,8 +25,6 @@ Each dashed oval represents an individual observed in a period (dashed square) n
 | Between-outcome | $\rho_0^{EC}$ | Within-period effect–cost ICC |
 | | $\rho_1^{EC}$ | Between-period effect–cost ICC |
 | | $\rho_2^{EC}$ | Within-individual effect–cost ICC |
-
-These parameters are subject to the ordering constraints: (i) $\rho_1^E \leq \rho_0^E$; (ii) $\rho_1^C \leq \rho_0^C$; (iii) $\rho_0^{EC} \leq \min(\rho_0^E, \rho_0^C)$; (iv) $\rho_1^{EC} \leq \min(\rho_1^E, \rho_1^C)$; and (v) $\rho_1^{EC} \leq \rho_0^{EC} \leq \rho_2^{EC}$.
 
 ### Acronyms
 
