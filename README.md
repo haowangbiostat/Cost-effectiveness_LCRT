@@ -6,7 +6,7 @@
 
 This repository contains the R code to reproduce the results presented in [Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials](TBD).
 
-### Intracluster Correlation Structure
+### Graphical Representation of the Data Structure
 
 The bivariate linear mixed model induces seven ICCs under a nested exchangeable correlation structure:
 
