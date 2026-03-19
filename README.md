@@ -40,7 +40,7 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 
 #### LODs and MMDs for SW-CRTs (Tables 4 and 5)
 
-* Run [`table_4_LOD_SWCRT.R`](codes/table_4_LOD_SWCRT.R) and [`table_5_MMD_SWCRT.R`](codes/table_5_MMD_SWCRT.R)
+* Run [`table_4_LOD_SWCRT.R`](tables/table_4_LOD_SWCRT.R) and [`table_5_MMD_SWCRT.R`](tables/table_5_MMD_SWCRT.R)
   + LODs and MMDs for SW-CRTs with $Q = 3, 5, 7$ treatment sequences
 
 #### LODs With Varying CAC (Figure 2)
