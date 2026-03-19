@@ -32,7 +32,7 @@ An illustration of three L-CRT design variants with $J = 6$ periods:
 The bivariate linear mixed model induces seven ICCs under a nested exchangeable correlation structure:
 
 <p align="center">
-  <img src="figures/ICC_diagram.pdf" width="100%">
+  <img src="figures/ICC_diagram.png" width="100%">
 </p>
 
 Each dashed oval represents an individual observed in a period (dashed square) nested in the cluster, with both a clinical outcome ($E$) and cost ($C$) measured per individual. Arrows depict the ICCs corresponding to within-period correlations ($\rho_0^E$, $\rho_0^C$), between-period correlations ($\rho_1^E$, $\rho_1^C$), and three types of between-outcome correlations ($\rho_0^{EC}$, $\rho_1^{EC}$, $\rho_2^{EC}$).
