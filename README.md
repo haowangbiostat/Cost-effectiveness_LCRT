@@ -30,9 +30,19 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 
 #### LODs for CRXO Trials and PA-LCRTs (Table 2)
 
-* Run [`table_2_crxo_pa_lod.R`](codes/table_2_crxo_pa_lod.R)
+* Run [`table_2_crxo_pa_lod.R`](tables/table_2_crxo_pa_lod.R)
   + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
-  + generate [`table_2.tex`](tables/table_2.tex)
+
+#### MMDs for CRXO Trials and PA-LCRTs (Table 3)
+
+* Run [`table_3_crxo_pa_mmd.R`](tables/table_3_crxo_pa_mmd.R)
+  + MMDs under varying parameter space specifications for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
+
+#### LODs and MMDs for SW-CRTs (Tables 4 and 5)
+
+* Run [`table_4_swcrt_lod.R`](codes/table_4_swcrt_lod.R) and [`table_5_swcrt_mmd.R`](codes/table_5_swcrt_mmd.R)
+  + LODs and MMDs for SW-CRTs with $Q \in \{3, 5, 7\}$ treatment sequences
+  + generate [`table_4.tex`](tables/table_4.tex) and [`table_5.tex`](tables/table_5.tex)
 
 #### LODs With Varying CAC (Figure 2)
 
@@ -46,23 +56,11 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
   + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with $\lambda r \in \{0.1, 1, 2\}$ when $J = 4$
   + generate [`lod_J4_varying_lambda_r.pdf`](figures/lod_J4_varying_lambda_r.pdf)
 
-#### MMDs for CRXO Trials and PA-LCRTs (Table 3)
-
-* Run [`table_3_crxo_pa_mmd.R`](codes/table_3_crxo_pa_mmd.R)
-  + MMDs under varying parameter space specifications for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
-  + generate [`table_3.tex`](tables/table_3.tex)
-
 #### MMDs With Varying Maximum Between-Period Effect ICC (Figure 3)
 
 * Run [`figure_3_mmd_J4.R`](codes/figure_3_mmd_J4.R)
   + MMDs for CRXO trials, PA-LCRTs, and SW-CRTs with varying $\rho_{1,\max}^E$ when $J = 4$
   + generate [`mmd_J4.pdf`](figures/mmd_J4.pdf)
-
-#### LODs and MMDs for SW-CRTs (Tables 4–5)
-
-* Run [`table_4_swcrt_lod.R`](codes/table_4_swcrt_lod.R) and [`table_5_swcrt_mmd.R`](codes/table_5_swcrt_mmd.R)
-  + LODs and MMDs for SW-CRTs with $Q \in \{3, 5, 7\}$ treatment sequences
-  + generate [`table_4.tex`](tables/table_4.tex) and [`table_5.tex`](tables/table_5.tex)
 
 ### Helper Functions
 
@@ -71,22 +69,3 @@ The following scripts in [`codes`](codes) contain helper functions used througho
 * `utils_PA.R`: variance calculation and LOD/MMD optimization for parallel-arm LCRTs
 * `utils_CRXO.R`: variance calculation and LOD/MMD optimization for cluster randomized crossover trials
 * `utils_SWCRT.R`: variance calculation and LOD/MMD optimization for stepped-wedge CRTs
-
-### Shiny App
-
-The [`shiny_app`](shiny_app) folder contains the source code for the interactive R Shiny application deployed at [https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/](https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/). The application automates LOD and MMD calculations for all three L-CRT design variants given user-specified parameters. To run the application locally:
-
-```r
-shiny::runApp("shiny_app")
-```
-
-### Reference
-
-```
-@article{Wang2025costeffectiveness,
-  title = {Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials},
-  journal = {Submitted to Statistics in Medicine},
-  author = {Wang, Hao and Liu, Jingxia and Tong, Jiaqi and Cameron, Drew B. and Spiegelman, Donna and Li, Fan},
-  year = {2025}
-}
-```
