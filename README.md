@@ -18,20 +18,13 @@ Purple cells indicate intervention periods and white cells indicate control peri
 
 ### Quickstart
 
-To reproduce the results, please download this repo on a machine with R, run each R script in the [`codes`](codes) directory without modification, and then the results are saved in [`figures`](figures) and [`tables`](tables). All the R scripts can be run standalone. To run the R scripts, you do not need to set any pathnames; everything is relative.
+To reproduce the results, please download this repo on a machine with R, run each R script in the [`codes`](codes) directory without modification, and then the results are saved in [`figures`](figures). To generate tables in the main paper, please run the scripts in [`tables`](tables). All the R scripts can be run standalone. To run the R scripts, you do not need to set any pathnames; everything is relative.
 
 Required R packages: dplyr, ggh4x, ggplot2, nloptr, patchwork, tidyr, xtable.
 
 ### Compute Optimal Designs
 
 Run our [`Shiny App`](https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/) to find optimal sample sizes for cost-effectiveness L-CRTs:
-
-* **Choose trial design:** Parallel-arm LCRT, cluster randomized crossover (CRXO), or stepped-wedge CRT (SW-CRT)
-* **Select optimization type:**
-  + Locally optimal design (LOD) — ICC values are known
-  + Maximin design (MMD) — ICC values are uncertain (specify ranges)
-* **Specify trial settings:** Type I error, treatment effect (INMB), ceiling ratio, standard deviations, number of periods, budget parameters, and ICC parameters
-* **Run optimization:** Click "Run Optimization" and download your optimal design
 
 A step-by-step tutorial with worked examples is provided in Web Appendix D of the paper.
 
