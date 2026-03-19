@@ -31,17 +31,17 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 #### LODs for CRXO Trials and PA-LCRTs (Table 2)
 
 * Run [`table_2_LOD_CRXO.R`](tables/table_2_LOD_CRXO.R) and [`table_2_LOD_PA.R`](tables/table_2_LOD_PA.R)
-  + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J \in {2, 4, 6}$ periods
+  + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J = 2, 4, 6$ periods
 
 #### MMDs for CRXO Trials and PA-LCRTs (Table 3)
 
 * Run [`table_3_MMD_CRXO.R`](tables/table_3_MMD_CRXO.R) and [`table_3_MMD_PA`](tables/table_3_MMD_PA)
-  + MMDs under varying parameter space specifications for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
+  + MMDs under varying parameter space specifications for CRXO trials and PA-LCRTs with $J = 2, 4, 6$ periods
 
 #### LODs and MMDs for SW-CRTs (Tables 4 and 5)
 
 * Run [`table_4_LOD_SWCRT`](codes/table_4_LOD_SWCRT) and [`table_5_MMD_SWCRT`](codes/table_5_MMD_SWCRT)
-  + LODs and MMDs for SW-CRTs with $Q \in \{3, 5, 7\}$ treatment sequences
+  + LODs and MMDs for SW-CRTs with $Q = 3, 5, 7$ treatment sequences
 
 #### LODs With Varying CAC (Figure 2)
 
@@ -52,7 +52,7 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 #### LODs With Varying Standardized Ceiling Ratio (Web Figure 1)
 
 * Run [`web_figure_S4_LOD_varying.R`](codes/web_figure_S4_LOD_varying.R)
-  + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with $\lambda r \in \{0.1, 1, 2\}$ when $J = 4$
+  + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with $\lambda r = 0.1, 1, 2$ when $J = 4$
   + generate [`web_figure_s4.pdf`](figures/web_figure_s4.pdf)
 
 #### MMDs With Varying Maximum Between-Period Effect ICC (Figure 3)
