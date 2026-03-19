@@ -6,15 +6,26 @@
 
 This repository contains the R code to reproduce the results presented in [Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials](TBD).
 
+### Acronyms
+
+* **L-CRT**: Longitudinal cluster randomized trial
+* **PA-LCRT**: Parallel-arm longitudinal cluster randomized trial
+* **CRXO**: Cluster randomized crossover trial
+* **SW-CRT**: Stepped-wedge cluster randomized trial
+* **LOD**: Local optimal design
+* **MMD**: Maximin design
+* **INMB**: Incremental net monetary benefit
+* **ICC**: Intracluster correlation coefficient
+* **CAC**: Cluster autocorrelation coefficient
+* **RE**: Relative efficiency
+
 ### Overview
 
 An illustration of three L-CRT design variants with $J = 6$ periods:
 
 <p align="center">
-  <img src="figures/designs.png" width="70%">
+  <img src="figures/designs.png" width="100%">
 </p>
-
-Purple cells indicate intervention periods and white cells indicate control periods. Panel (a) displays a PA-LCRT, panel (b) shows a CRXO trial, and panel (c) presents an SW-CRT.
 
 ### Quickstart
 
@@ -32,63 +43,41 @@ A step-by-step tutorial with worked examples is provided in Web Appendix D of th
 
 #### LODs for CRXO Trials and PA-LCRTs (Table 2)
 
-* Run [`table_2_crxo_pa_lod.R`](codes/table_2_crxo_pa_lod.R)
-  + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
-  + generate [`table_2.tex`](tables/table_2.tex)
-
-#### LODs With Varying CAC (Figure 2)
-
-* Run [`figure_2_lod_J4.R`](codes/figure_2_lod_J4.R)
-  + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with varying cluster autocorrelation (CAC) when $J = 4$
-  + generate [`lod_J4.pdf`](figures/lod_J4.pdf)
-
-#### LODs With Varying Standardized Ceiling Ratio (Web Figure 1)
-
-* Run [`web_figure_1_lod_J4_varying_lambda_r.R`](codes/web_figure_1_lod_J4_varying_lambda_r.R)
-  + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with $\lambda r \in \{0.1, 1, 2\}$ when $J = 4$
-  + generate [`lod_J4_varying_lambda_r.pdf`](figures/lod_J4_varying_lambda_r.pdf)
+* Run [`table_2_LOD_CRXO.R`](tables/table_2_LOD_CRXO.R) and [`table_2_LOD_PA.R`](tables/table_2_LOD_PA.R)
+  + LODs under varying ICC and design parameters for CRXO trials and PA-LCRTs with $J = 2, 4, 6$ periods
 
 #### MMDs for CRXO Trials and PA-LCRTs (Table 3)
 
-* Run [`table_3_crxo_pa_mmd.R`](codes/table_3_crxo_pa_mmd.R)
-  + MMDs under varying parameter space specifications for CRXO trials and PA-LCRTs with $J \in \{2, 4, 6\}$ periods
-  + generate [`table_3.tex`](tables/table_3.tex)
+* Run [`table_3_MMD_CRXO.R`](tables/table_3_MMD_CRXO.R) and [`table_3_MMD_PA`](tables/table_3_MMD_PA.R)
+  + MMDs under varying parameter space specifications for CRXO trials and PA-LCRTs with $J = 2, 4, 6$ periods
+
+#### LODs and MMDs for SW-CRTs (Tables 4 and 5)
+
+* Run [`table_4_LOD_SWCRT.R`](tables/table_4_LOD_SWCRT.R) and [`table_5_MMD_SWCRT.R`](tables/table_5_MMD_SWCRT.R)
+  + LODs and MMDs for SW-CRTs with $Q = 3, 5, 7$ treatment sequences
+
+#### LODs With Varying CAC (Figure 2)
+
+* Run [`figure_3_LOD.R`](codes/figure_3_LOD.R)
+  + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with varying cluster autocorrelation (CAC) when $J = 4$
+  + generate [`figure_3.pdf`](figures/figure_3.pdf)
+
+#### LODs With Varying Standardized Ceiling Ratio (Web Figure 1)
+
+* Run [`web_figure_S4_LOD_varying.R`](codes/web_figure_S4_LOD_varying.R)
+  + LODs for CRXO trials, PA-LCRTs, and SW-CRTs with $\lambda r = 0.1, 1, 2$ when $J = 4$
+  + generate [`web_figure_s4.pdf`](figures/web_figure_s4.pdf)
 
 #### MMDs With Varying Maximum Between-Period Effect ICC (Figure 3)
 
-* Run [`figure_3_mmd_J4.R`](codes/figure_3_mmd_J4.R)
+* Run [`figure_4_MMD.R`](codes/figure_4_MMD.R)
   + MMDs for CRXO trials, PA-LCRTs, and SW-CRTs with varying $\rho_{1,\max}^E$ when $J = 4$
-  + generate [`mmd_J4.pdf`](figures/mmd_J4.pdf)
-
-#### LODs and MMDs for SW-CRTs (Tables 4–5)
-
-* Run [`table_4_swcrt_lod.R`](codes/table_4_swcrt_lod.R) and [`table_5_swcrt_mmd.R`](codes/table_5_swcrt_mmd.R)
-  + LODs and MMDs for SW-CRTs with $Q \in \{3, 5, 7\}$ treatment sequences
-  + generate [`table_4.tex`](tables/table_4.tex) and [`table_5.tex`](tables/table_5.tex)
+  + generate [`figure_4.pdf`](figures/figure_4.pdf)
 
 ### Helper Functions
 
-The following scripts in [`codes`](codes) contain helper functions used throughout the analysis. These are automatically sourced by the main scripts — you do not need to run them separately:
+The following scripts in [`codes`](codes) contain helper functions used in the analysis. These are automatically sourced by the main scripts — you do not need to run them separately:
 
 * `utils_PA.R`: variance calculation and LOD/MMD optimization for parallel-arm LCRTs
 * `utils_CRXO.R`: variance calculation and LOD/MMD optimization for cluster randomized crossover trials
 * `utils_SWCRT.R`: variance calculation and LOD/MMD optimization for stepped-wedge CRTs
-
-### Shiny App
-
-The [`shiny_app`](shiny_app) folder contains the source code for the interactive R Shiny application deployed at [https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/](https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/). The application automates LOD and MMD calculations for all three L-CRT design variants given user-specified parameters. To run the application locally:
-
-```r
-shiny::runApp("shiny_app")
-```
-
-### Reference
-
-```
-@article{Wang2025costeffectiveness,
-  title = {Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials},
-  journal = {Submitted to Statistics in Medicine},
-  author = {Wang, Hao and Liu, Jingxia and Tong, Jiaqi and Cameron, Drew B. and Spiegelman, Donna and Li, Fan},
-  year = {2025}
-}
-```
