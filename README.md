@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/haowangbiostat/Cost-effectiveness_LCRT/blob/main/LICENSE)
 [![Shiny App](https://img.shields.io/badge/Shiny-Interactive%20App-blue)](https://f07k8s-hao-wang.shinyapps.io/Cost-effectiveness_LCRT/)
 
-This repository contains the R code to reproduce the results presented in [Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials](TBD).
+This repository contains the R code to reproduce the results presented in [Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials](https://arxiv.org/abs/2603.19051).
 
 ### Graphical Representation of the Data Structure
 
@@ -101,3 +101,14 @@ The following scripts in [`codes`](codes) contain helper functions used in the a
 * `utils_PA.R`: variance calculation and LOD/MMD optimization for parallel-arm LCRTs
 * `utils_CRXO.R`: variance calculation and LOD/MMD optimization for cluster randomized crossover trials
 * `utils_SWCRT.R`: variance calculation and LOD/MMD optimization for stepped-wedge CRTs
+
+### Reference
+
+```
+@article{Wang2026CELCRT,
+  title = {Optimal Sample Size Calculation in Cost-Effectiveness Longitudinal Cluster Randomized Trials},
+  author={Hao Wang and Jingxia Liu and Drew B. Cameron and Jiaqi Tong and Donna Spiegelman and Daniella Meeker and Fan Li},
+  journal={arXiv preprint arXiv:2504.08158},
+  year = {2026}
+}
+```
